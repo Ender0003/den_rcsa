@@ -68,7 +68,7 @@ export default function HomePage() {
               alignItems: 'center', // Центруємо по вертикалі
               padding: '10px 20px',
               borderRadius: '5px',
-              backgroundColor: '#007bff',
+              backgroundColor: '#a200ffff',
               color: '#fff',
               textDecoration: 'none',
               border: 'none',
