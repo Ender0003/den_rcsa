@@ -66,7 +66,7 @@ export default function HomePage() {
               display: 'flex', // Включаємо Flexbox
               justifyContent: 'center', // Центруємо по горизонталі
               alignItems: 'center', // Центруємо по вертикалі
-              padding: '10px 20px',
+              padding: '10px 15px',
               borderRadius: '5px',
               backgroundColor: '#a200ffff',
               color: '#fff',
