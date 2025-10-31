@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function HomePage() {
+  // Функція для визначення привітання залежно від часу доби
   const getGreeting = () => {
     const now = new Date();
     const hours = now.getHours();
@@ -43,27 +44,45 @@ export default function HomePage() {
           display: 'flex',
           gap: '10px',
           justifyContent: 'center',
+          flexWrap: 'wrap', // Додано для кращого відображення кнопок
+          marginTop: '20px'
         }}>
+          
+          {/* 1. Кнопка "Про нас" */}
           <Button variant={'dk'} asChild>
             <Link href="/about" >
               Про нас
             </Link>
           </Button>
+          
+          {/* 2. Кнопка "Контакти" */}
           <Button variant={'dk'} asChild>
-          <Link 
-            href="/contacts" 
-            >
-            Контакти
-          </Link>
+            <Link 
+              href="/contacts" 
+              >
+              Контакти
+            </Link>
           </Button>
+          
+          {/* 3. Кнопка "Реєстрація" */}
           <Button variant={'dk'} asChild>
-          <Link 
-            href="/sign" 
-            >
-            Вхід
-          </Link>
+            <Link 
+              href="/registration" 
+              >
+              Реєстрація
+            </Link>
           </Button>
-          </div>
+
+          {/* 🚀 4. НОВА КНОПКА: Багатокрокова форма замовлення */}
+          <Button variant={'dk'} asChild style={{ backgroundColor: '#22C55E' }}> 
+            <Link 
+              href="/order" // 👈 ПЕРЕЙДІТЬ НА СТОРІНКУ, ДЕ ВИ РОЗМІСТИТЕ MultiStepForm
+              >
+              Оформити замовлення (Multi-step)
+            </Link>
+          </Button>
+
+        </div>
       </div>
     </div>
   );
